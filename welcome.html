@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome | Traveller Declaration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #8bc422, #f4c300);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .subheading {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            background-color: #e4002b;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #bb0c2c;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9rem;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1> Ministry of Health and Child Care </h1>
+    <div class="subheading">Traveller Health Declaration System – Zimbabwe</div>
+    <a class="button" href="{{ url_for('health_form') }}">Start Declaration</a>
+    <footer>© <span id="year"></span> Ministry of Health &amp; Child Care Zimbabwe</footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
